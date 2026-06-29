@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { 
   Code, Smartphone, Globe, Briefcase, Map, Shield, 
-  Menu, X, Phone, Mail, User, Github, Linkedin, Twitter, MessageSquare, ArrowUp, Download, Award, ChevronRight
+  Menu, X, Phone, Mail, User, Github, Linkedin, Twitter, MessageSquare, ArrowUp, Award, ChevronRight
 } from 'lucide-react';
 
 import ThemeToggle from './components/ThemeToggle';
@@ -44,7 +44,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const cvUrl = new URL('./cv/JOSHUA_CV.pdf', import.meta.url).href;
+
 
   // Monitor scroll behavior
   useEffect(() => {
@@ -446,14 +446,7 @@ export default function App() {
                   <span>Explore Work</span>
                   <ChevronRight className="w-4 h-4" />
                 </a>
-                <a 
-                  href={cvUrl}
-                  download="AFOLAYAN_DAMI_JOSHUA_CV.pdf"
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full font-display font-semibold text-center border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 bg-white/70 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/40 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Download Resume</span>
-                </a>
+
               </div>
 
               {/* Stats Counters */}
